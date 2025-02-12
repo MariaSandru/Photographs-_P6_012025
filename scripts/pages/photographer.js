@@ -1,5 +1,5 @@
 //Mettre le code JavaScript lié à la page photographer.html/* imports fonctions  */
-import {getPhotographers} from "../utils/dataConnection.js";
+import {getPhotographers} from "./utils/dataConnection.js";
 import {getMedia} from "../utils/dataConnection.js";
 import {getUrl} from "../utils/userInterface.js";
 import {displayHeaderPhotograph} from "../utils/userInterface.js";
