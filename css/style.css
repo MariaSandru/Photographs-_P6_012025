@@ -1,29 +1,24 @@
 @import url("./photographer.css");
 
 /* règles d'espacements pour l' accessibilité*/ 
-*{
- line-height: 1.5 ;
-/* letter-spacing: 0.12em */
- word-spacing: 0.16em ;
-}
-p{
- margin-bottom: 2em;
- text-decoration: none;
-} 
 
-body {
-   /* font-family: "DM Sans", sans-serif;
+*{
+    line-height: 1.5 ;
+    letter-spacing: 0.12em ;
+    word-spacing: 0.16em ;
+   }
+   
+   p{
+    margin-bottom: 2em; /**/
+   } 
+
+   body {
+    font-family: "DM Sans", sans-serif;
     max-width: 1900px;
     margin: auto;
-    box-sizing: border-box;*/
-    font-family: "Roboto", sans-serif; /* Changer la police pour Roboto */
-    max-width: 1800px;
-    margin: 20px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-    background-color: #f5f5f5;
-
-    
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+           
 }
 header {
     display: -webkit-box;
@@ -34,7 +29,7 @@ header {
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -42,28 +37,42 @@ header {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center;
+   
+    justify-content: space-between;
+    align-items: center;
     height: 90px;
     width: 100%;
-}
-h1 {
-   color: #901C1C;
-   /* margin-right: 100px;*/
-   
-    margin-right: 80px;
-    font-size: 2em;
+    padding: 20px;
 
+    
 }
+
+header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Retirer le soulignement */
+}
+
+h1 {
+    color: #901C1C;
+    font-size: 2em;
+    margin-left: 400px; /* Espace entre le logo et le titre */
+    
+}
+
+
 .logo {
     height: 2.2rem;
     margin-left: 100px;
 }
+
 .logo:hover {
-    transform: scale(1.08);
     -webkit-transform: scale(1.08);
         -ms-transform: scale(1.08);
-    
+    transform: scale(1.08);
+
 }
+
 .photographer_section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -91,9 +100,9 @@ h1 {
             flex-direction: column;
 }
 .photographer_section article a:hover {
-    transform: scale(1.08);
     -webkit-transform: scale(1.08);
         -ms-transform: scale(1.08);
+            transform: scale(1.08);
 }
 /* Nom du photographe */
 .photographer_section article h2 {
@@ -105,10 +114,12 @@ h1 {
 img.portrait {
     height: 200px;
     width: 200px;
-    border-radius: 50%;
+    border-radius:  50%;
     overflow: hidden; 
     margin: auto;
-    object-fit: cover; /* Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage */
+    
+    -o-object-fit: cover;
+       object-fit: cover; /* Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage */
 }
 /*informations supplémentaires photographes */
 .photographer_section article p{
@@ -133,8 +144,6 @@ p.bold{
 }
 .photographer_section article a {
     text-decoration: none;
-    
-   
 }
 .photographer_section article a:focus-visible {
     outline: solid 2px #901C1C;
@@ -148,11 +157,15 @@ h1.name{
     font-size: 2.5em;
     width: 100%;
 }
-
-
 a {
    
     text-decoration: none;/* Enlever le soulignement des liens */
     
+}
+
+@media (max-width: 768px) {
+    .photographer_section {
+        grid-template-columns: 1fr;
+    }
 }
 
