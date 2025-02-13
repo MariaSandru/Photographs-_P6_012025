@@ -1,6 +1,6 @@
    import {getPhotographers} from "../utils/dataConnection.js";
    import {displayData} from "../utils/userInterface.js";
-   
+  
    
    /* async function getPhotographers() {
         // Ceci est un exemple de données pour avoir un affichage de photographes de test dès le démarrage du projet, 
