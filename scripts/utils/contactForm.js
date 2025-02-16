@@ -109,8 +109,8 @@ function validateForm(){
         responses.isValid = true; /* tout les contrôles sont vrai   */
         console.log("les champs saisies:",responses);       
         closeModal();
-        /*  pour réinitialiser les variables après fermeture de la modale */
-       location.reload(); 
+        
+       
     }
 }
 
