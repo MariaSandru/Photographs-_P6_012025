@@ -81,7 +81,7 @@ img.portrait {
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
-
+background-color: hsl(0, 0%, 90%);
   object-fit: cover; /* Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage */
 }
 /*informations supplémentaires photographes */
