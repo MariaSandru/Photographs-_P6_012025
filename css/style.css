@@ -44,7 +44,8 @@ h1 {
 }
 
 .logo {
-  height: 2.2rem;
+  height: 50px;
+  width: 200px;
   margin-left: 20px;
   margin-right: 500px; /* Espace entre le logo et le titre */
 }
@@ -98,6 +99,7 @@ background-color: hsl(0, 0%, 90%);
 p.bold {
   font-weight: 600;
   font-size: 1.2em;
+  color: black;
 }
 .photographer_section .boldLight {
   font-weight: 200;
@@ -220,7 +222,8 @@ a {
   }
 
   .logo {
-    height: 2rem;
+    height: 50px;
+    width: 200px;
     margin-left: 10px;
     margin-right: 700px; /* Espace entre le logo et le titre */
   }
