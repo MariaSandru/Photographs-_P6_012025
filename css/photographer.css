@@ -1,12 +1,46 @@
-.photograph-header {
-  background-color: #fafafa;
-  min-height: 300px;
-  margin: 0 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+/*.photograph-header {
+  
+}*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 90%;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (min-width: 800px) {
+  .photograph-header {
+    height: 25rem;
+    padding: 1rem;
+    background: rgba(223, 221, 221, 0.199);
+    border-radius: 5px;
+
+    background-color: #fafafa;
+    min-height: 300px;
+    margin: 0 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 
 header a:focus-visible {
   outline: solid 2px #901c1c;
@@ -174,12 +208,18 @@ form textarea.inputMessage {
 
 /**** partie media ************************/
 .media-section {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   margin-left: 100px;
   margin-right: 100px;
   object-fit: cover;
   border-radius: 10px;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
 
 #medias {
   margin-top: 50px;
