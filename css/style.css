@@ -1,4 +1,3 @@
-
 @import url("./photographer.css");
 /* règles d'espacements pour l' accessibilité*/
 
@@ -9,7 +8,8 @@
 }
 
 p {
-  margin-bottom: 2em; /**/
+  margin-bottom: 2em;
+  /**/
 }
 
 body {
@@ -19,6 +19,7 @@ body {
 
   box-sizing: border-box;
 }
+
 header {
   display: flex;
   flex-direction: row;
@@ -31,7 +32,8 @@ header {
 header a {
   display: flex;
   align-items: center;
-  text-decoration: none; /* Retirer le soulignement */
+  text-decoration: none;
+  /* Retirer le soulignement */
 
   flex: 100%;
 }
@@ -47,17 +49,21 @@ h1 {
   height: 50px;
   width: 200px;
   margin-left: 20px;
-  margin-right: 500px; /* Espace entre le logo et le titre */
+  margin-right: 500px;
+  /* Espace entre le logo et le titre */
 }
+
 .logo:hover {
   transform: scale(1.08);
 }
+
 .photographer_section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 90px;
   margin-top: 100px;
 }
+
 .photographer_section article,
 .photographer_section article a {
   justify-self: center;
@@ -66,15 +72,18 @@ h1 {
   align-items: center;
   flex-direction: column;
 }
+
 .photographer_section article a:hover {
   transform: scale(1.08);
 }
+
 /* Nom du photographe */
 .photographer_section article h2 {
   color: #d3573c;
   font-size: 1.5em;
   margin-bottom: 10px;
 }
+
 /* portrait photographe  */
 img.portrait {
   height: 200px;
@@ -82,49 +91,61 @@ img.portrait {
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
-background-color: hsl(0, 0%, 90%);
-  object-fit: cover; /* Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage */
+  background-color: hsl(0, 0%, 90%);
+  object-fit: cover;
+  /* Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage */
 }
+
 /*informations supplémentaires photographes */
 .photographer_section article p {
   margin: 0;
   font-size: 0.9em;
 }
-.photographer_section a + p {
+
+.photographer_section a+p {
   /* couleur et taille de la localisation    */
   color: #901c1c;
   font-size: 1em;
   margin-bottom: 5px;
 }
+
 p.bold {
   font-weight: 600;
   font-size: 1.2em;
   color: black;
 }
+
 .photographer_section .boldLight {
   font-weight: 200;
   color: rgb(117, 117, 117);
 }
+
 .photographer_section article {
   row-gap: 5px;
 }
+
 .photographer_section article a {
   text-decoration: none;
 }
+
 .photographer_section article a:focus-visible {
   outline: solid 2px #901c1c;
   outline-offset: 2px;
 }
+
 p.location {
   color: #901c1c;
 }
+
 h1.name {
   color: #d3573c;
   font-size: 2.5em;
   width: 100%;
 }
+
 a {
-  text-decoration: none; /* Enlever le soulignement des liens */
+  text-decoration: none;
+  /* Enlever le soulignement des liens */
 }
 
 @media screen and(max-width: 768px) {
@@ -169,6 +190,7 @@ a {
     margin-top: 10px;
   }
 }
+
 @media screen and(max-width: 480px) {
   h1 {
     font-size: 1.5em;
@@ -206,6 +228,7 @@ a {
     margin-right: 10px;
   }
 }
+
 @media screen and(max-width: 1780px) {
   body {
     padding: 10px;
@@ -225,7 +248,8 @@ a {
     height: 50px;
     width: 200px;
     margin-left: 10px;
-    margin-right: 700px; /* Espace entre le logo et le titre */
+    margin-right: 700px;
+    /* Espace entre le logo et le titre */
   }
 
   .photographer_section {
