@@ -238,7 +238,7 @@ ul {
   margin: 0;
   background-color: #901c1c;
   border-radius: 5px;
-  min-width: 150px;
+  min-width: 200px;
   padding: 0px 10px;
   height: fit-content;
   user-select: none;
@@ -252,7 +252,7 @@ li {
 .listButton {
   border-radius: 5px;
   overflow: hidden;
-  font-size: 1.1em;
+  font-size: 20px;
   color: white;
   padding: 10px;
   height: 50px;
