@@ -1,6 +1,6 @@
 export async function getPhotographers() {
     try {
-        const response = await fetch("../data/photographers.json");
+        const response = await fetch("./data/photographers.json");
         /* attendre la résolution de la promesse  */
         const data = await response.json();
         return data.photographers; /* récupération tableau de données photographers  */
