@@ -1,5 +1,5 @@
-@import url("/css/photographer.css");
 
+@import url("./photographer.css");
 /* règles d'espacements pour l' accessibilité*/
 
 * {
