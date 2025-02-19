@@ -17,7 +17,7 @@ body {
   font-family: "Roboto", sans-serif;
   max-width: 1440px;
   margin: auto;
-
+  /*font-family: "DM Sans", sans-serif;*/
   box-sizing: border-box;
 }
 
@@ -28,6 +28,8 @@ header {
   height: 90px;
   width: 100%;
   padding: 20px;
+  background-color: black;
+
 }
 
 header a {
@@ -37,6 +39,8 @@ header a {
   /* Retirer le soulignement */
 
   flex: 100%;
+
+
 }
 
 h1 {
@@ -45,12 +49,14 @@ h1 {
   flex: 1;
   text-align: right;
   font-weight: normal;
+  order: 2;
+  background-color: rgb(121, 3, 66);
 
 }
 
 .logo {
   height: 50px;
-  width: 200px;
+
   margin-left: 20px;
   margin-right: 500px;
   /* Espace entre le logo et le titre */
@@ -143,27 +149,121 @@ p.location {
 
 h1.name {
   color: #d3573c;
-  font-size: 2.5em;
+
   width: 100%;
+
 }
 
 a {
   text-decoration: none;
+  background-color: blue;
+
   /* Enlever le soulignement des liens */
 }
 
-@media screen and(max-width: 768px) {
+@media screen and(max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+
+  }
+
+  .logo {
+    height: 10px;
+    margin-left: 5px;
+  }
+
+  .photo-container {
+    padding: 10px;
+  }
+
+  .photo-title {
+    font-size: 1.2em;
+  }
+
+  .photo-description {
+    font-size: 0.9em;
+  }
+
+  .photograph-header {
+    margin: 0 10px;
+    padding: 10px;
+  }
+
+  .contact_button {
+    font-size: 0.9em;
+  }
+
+  .media-section {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and(max-width: 1780px) {
+  body {
+    padding: 10px;
+  }
+
+  header a {
+    padding: 10px;
+
+  }
+
+  h1 {
+    font-size: 1.8em;
+    margin-left: 700px;
+    margin-right: 10px;
+  }
+
+  .logo {
+    height: 50px;
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 700px;
+    /* Espace entre le logo et le titre */
+  }
+
+  .photographer_section {
+    grid-template-columns: 1fr;
+  }
+
+  .photograph-header {
+    flex-direction: column;
+    min-height: auto;
+    margin: 0 20px;
+    padding: 10px;
+  }
+
+  .photograph-header #photograph-data,
+  .photograph-header #contact-button,
+  .photograph-header #photograph-picture {
+    width: 100%;
+  }
+
+  .contact_button {
+    width: 100%;
+    min-width: auto;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   body {
     padding: 10px;
   }
 
   header {
-    padding: 10px;
+    padding: 0px;
+    ;
+  }
+
+  header h1 {
+    order: 3;
   }
 
   h1 {
     font-size: 1.8em;
-    margin-right: 10px;
+    margin-right: 0px;
     font-weight: normal;
   }
 
@@ -196,7 +296,7 @@ a {
   }
 }
 
-@media screen and(max-width: 480px) {
+@media screen and (max-width: 480px) {
   h1 {
     font-size: 1.5em;
     margin-left: 400px;
@@ -234,7 +334,7 @@ a {
   }
 }
 
-@media screen and(max-width: 1780px) {
+@media screen and (min-width: 1780px) {
   body {
     padding: 10px;
   }
