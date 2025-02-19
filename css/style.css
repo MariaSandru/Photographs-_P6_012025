@@ -3,17 +3,18 @@
 
 * {
   line-height: 1.5;
-  /*letter-spacing: 0.12em ;*/
+  letter-spacing: 0.10em;
   word-spacing: 0.16em;
 }
 
 p {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  color: rgb(60, 58, 58);
   /**/
 }
 
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   max-width: 1440px;
   margin: auto;
 
@@ -40,9 +41,11 @@ header a {
 
 h1 {
   color: #901c1c;
-  font-size: 2em;
+  font-size: 30px;
   flex: 1;
   text-align: right;
+  font-weight: normal;
+
 }
 
 .logo {
@@ -80,8 +83,9 @@ h1 {
 /* Nom du photographe */
 .photographer_section article h2 {
   color: #d3573c;
-  font-size: 1.5em;
+  font-size: 30px;
   margin-bottom: 10px;
+  font-weight: normal;
 }
 
 /* portrait photographe  */
@@ -110,7 +114,7 @@ img.portrait {
 }
 
 p.bold {
-  font-weight: 600;
+
   font-size: 1.2em;
   color: black;
 }
@@ -160,6 +164,7 @@ a {
   h1 {
     font-size: 1.8em;
     margin-right: 10px;
+    font-weight: normal;
   }
 
   .logo {

@@ -56,6 +56,9 @@ header a:focus-visible {
   font-size: 2.3em;
   color: #d3573c;
   text-align: left;
+  font-style: inherit;
+  font-weight: 400;
+
 }
 
 .photograph-header #photograph-data,
@@ -101,12 +104,15 @@ header a:focus-visible {
 
 /***** partie modal *******************/
 #contact_modal {
+
   display: none;
+
+
 }
 
 .modalBground {
   border-radius: 5px;
-  background-color: #db8876;
+  background-color: #DB8876;
   display: none;
   width: 35%;
   display: flex;
@@ -117,17 +123,21 @@ header a:focus-visible {
   position: absolute;
   top: 3%;
   left: 25%;
-  z-index: 2;
+  right: 25%;
+  z-index: 2
 }
 
 .modalBground_layout {
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
-  background-color: rgba(117, 117, 117, 0.92);
+  background-color: rgba(130, 131, 141, 0.4);
+
   z-index: 1;
+
 }
 
 .modalBground header {
@@ -142,7 +152,7 @@ header a:focus-visible {
 }
 
 .modalBground header h2 {
-  font-size: 2.6em;
+  font-size: 3em;
   font-weight: normal;
   width: 100%;
   margin: 0;
@@ -253,7 +263,7 @@ form textarea.inputMessage {
   width: 346px;
   height: 346px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .mediaLink:hover {
@@ -284,7 +294,7 @@ form textarea.inputMessage {
 
 .menuFilter label {
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-top: 10px;
 }
 
@@ -366,9 +376,11 @@ span#arrowUp:focus {
   color: #901c1c;
   font-size: 20px;
   margin: 0;
-  font-weight: 600;
+  font-weight: normal;
   align-items: center;
   width: 73%;
+
+
 }
 
 .totalLikes {
@@ -418,21 +430,20 @@ span .marginLikes {
 
 #priceLikes {
   /* cadre total des likes et prix en bas à droite */
-  background-color: #d3573c;
+  background-color: #db8876;
   position: fixed;
   bottom: 0;
   right: 25px;
   padding: 10px 20px;
-  min-width: 300px;
-  height: 40px;
-  font-weight: 600;
-  font-size: 1.5em;
+  min-width: 100px;
+  height: 60px;
+  width: 450px;
+  font-weight: 100;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 5px;
   font-size: 30px;
 }
 
@@ -502,8 +513,8 @@ button.closeLightbox {
   top: 0px;
 }
 
-@media (min-width: 800px) {
-  * {
+@media (min-width: 300px) {
+  body {
     max-width: 1440px;
   }
 }
