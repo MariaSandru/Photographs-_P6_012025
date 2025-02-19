@@ -67,7 +67,7 @@ header a:focus-visible {
 #photograph-data {
   margin: 1rem 0;
   line-height: 4rem;
-  font-size: 4rem;
+  font-size: 2em;
 
 }
 
@@ -284,7 +284,7 @@ form textarea.inputMessage {
 
 .menuFilter label {
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 2em;
   padding-top: 10px;
 }
 
