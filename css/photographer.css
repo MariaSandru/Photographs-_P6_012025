@@ -10,17 +10,14 @@
 
 html {
   font-size: 60%;
-
 }
 
 body {
-  width: 90%;
+  /*width: 90%;*/
   margin: auto;
-
 }
 
 img {
-
   display: block;
   object-fit: cover;
 }
@@ -28,23 +25,6 @@ img {
 #main {
   position: relative;
   top: 9rem;
-}
-
-@media (min-width: 800px) {
-  .photograph-header {
-    height: 25rem;
-    padding: 1rem;
-    background: rgba(223, 221, 221, 0.199);
-    border-radius: 5px;
-
-    background-color: #fafafa;
-    min-height: 300px;
-    margin: 0 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
 
 
@@ -58,22 +38,19 @@ header a:focus-visible {
   text-align: left;
   font-style: inherit;
   font-weight: 400;
-
 }
 
 .photograph-header #photograph-data,
 .photograph-header #contact-button {
   width: 38%;
-
 }
+
 
 #photograph-data {
   margin: 1rem 0;
   line-height: 4rem;
   font-size: 2em;
-
 }
-
 
 .photograph-header #photograph-picture {
   width: 20%;
@@ -104,15 +81,12 @@ header a:focus-visible {
 
 /***** partie modal *******************/
 #contact_modal {
-
   display: none;
-
-
 }
 
 .modalBground {
   border-radius: 5px;
-  background-color: #DB8876;
+  background-color: #db8876;
   display: none;
   width: 35%;
   display: flex;
@@ -124,7 +98,7 @@ header a:focus-visible {
   top: 3%;
   left: 25%;
   right: 25%;
-  z-index: 2
+  z-index: 2;
 }
 
 .modalBground_layout {
@@ -137,10 +111,11 @@ header a:focus-visible {
   background-color: rgba(130, 131, 141, 0.4);
 
   z-index: 1;
-
 }
 
 .modalBground header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   width: 100%;
   height: fit-content;
@@ -149,13 +124,18 @@ header a:focus-visible {
 .modalBground header img {
   cursor: pointer;
   margin-bottom: auto;
+ margin-right: 10px;
 }
 
 .modalBground header h2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
   font-size: 3em;
   font-weight: normal;
   width: 100%;
   margin: 0;
+
 }
 
 .modalBground img:hover,
@@ -175,8 +155,6 @@ form {
   flex-direction: column;
   align-items: flex-start;
 }
-
-
 
 form label {
   color: #312e2e;
@@ -216,7 +194,7 @@ form textarea.inputMessage {
   display: block;
   margin-bottom: -15px;
   text-align: left;
-  -o-transition: 0.2s;
+
   transition: 0.2s;
 }
 
@@ -236,17 +214,22 @@ form textarea.inputMessage {
 /**** partie media ************************/
 .media-section {
   /*margin-top: 20px;*/
-  margin-left: 100px;
-  margin-right: 100px;
+
   object-fit: cover;
   border-radius: 10px;
-  margin-top: 2rem;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
+#main .media-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px 100px;
+}
 
 #medias {
   margin-top: 50px;
@@ -255,8 +238,9 @@ form textarea.inputMessage {
   flex-wrap: wrap;
   column-gap: 50px;
   row-gap: 50px;
-  justify-content: space-between;
   padding-bottom: 70px;
+  /*justify-content: center;*/
+
 }
 
 .contentMedia {
@@ -379,8 +363,6 @@ span#arrowUp:focus {
   font-weight: normal;
   align-items: center;
   width: 73%;
-
-
 }
 
 .totalLikes {
@@ -437,7 +419,7 @@ span .marginLikes {
   padding: 10px 20px;
   min-width: 100px;
   height: 60px;
-  width: 450px;
+  /*width: 450px;*/
   font-weight: 100;
   display: flex;
   flex-direction: row;
@@ -513,8 +495,1076 @@ button.closeLightbox {
   top: 0px;
 }
 
-@media (min-width: 300px) {
-  body {
-    max-width: 1440px;
+@media screen and (max-width: 480px) {
+  /*body{
+    width: 90%;
+
+  }*/
+  header {
+    
+    margin-top: 50px;
+    text-align: center;
+}
+  h1.firstName {
+    font-size: 1.5em;
+   
+   
+  }
+
+  .logo {
+    height: 50px;
+    margin-left: 90px;
+    text-align: center;
+  }
+
+  .photo-container {
+    padding: 10px;
+  }
+
+  img.portrait {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    background-color: hsl(0, 0%, 90%);
+    object-fit: cover;
+    margin-top: 10px;
+}
+.menuFilter {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  height: fit-content;
+  margin-top: 10px;
+}
+  .photo-title {
+    font-size: 1.2em;
+  }
+  #photograph-data {
+    margin: 1rem 0; 
+    line-height: 3rem; 
+     font-size: 15px; 
+}
+  .photo-description {
+    font-size: 0.9em;
+  }
+
+  .photograph-header {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.photograph-header #photograph-data,
+.photograph-header #contact-button {
+  width: auto;
+}
+   .contact_button {
+    font-size: 15px;
+ margin-right: 90px;
+ min-height: 20px;
+  }
+
+  #main .media-section {
+    margin: unset;
+  }
+
+  .media-section {
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: unset;
+  }
+
+  .contentMedia {
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  #medias {
+    margin-top: 50px;
+    display:grid;
+}
+.modalBground {
+  border-radius: 5px;
+  background-color: #db8876;
+  display: none;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  position: absolute;
+  top: 3%;
+  left: 20%;
+  right: 20%;
+  z-index: 2;
+}
+.modalBground_layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(130, 131, 141, 0.4);
+
+  z-index: 1;
+}
+
+.modalBground header {
+  justify-content: space-between;
+  height: fit-content;
+  margin-top:5px;
+  width: 100%;
+}
+
+
+
+.modalBground header h2 {
+  font-size: 15px;
+  margin: 0;
+  width: 100px;
+  height: 50px;
+text-align: left;
+}
+
+.modalBground header img {
+  
+  margin-left: 60%;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  
+}
+
+form label {
+  margin-top: 10px;
+  color: #312e2e;
+  font-size: 1.5em;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+}
+
+form input {
+  width: 100%;
+  height: 100%;
+  min-height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+form textarea.inputMessage {
+  
+  padding-top: 10px;
+  width: 100%;
+  font-size: 1em;
+  border-radius: 5px;
+}
+.contact_button {
+  font-size: 1em; 
+ min-width: 60px; 
+  min-height: 30px;
+  
   }
 }
+@media (min-width: 481px) and (max-width: 768px) {
+
+  #contact-button {
+    margin-left: 70px;
+}
+
+  .logo{
+    margin-left: 10px;
+    margin-right: 200px;
+    height: 60px;
+    margin-top: 50px;
+  
+    }
+  .photograph-header {
+    height: 25rem;
+    padding: 1rem;
+    border-radius: 5px;
+    min-height: 10px;
+    margin-right: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*justify-self: center;*/
+   width: 680px;
+    
+  }
+  .firstName {
+    font-size: 3em;
+ 
+   
+  }
+  #photograph-data {
+    margin: 1rem 0;
+    line-height: 4rem; 
+     font-size: 1.5em; 
+    height: 200px;
+}
+  img.portrait {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    background-color: hsl(0, 0%, 90%);
+    object-fit: cover;
+    margin-top: 10px;
+}
+#medias {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+  margin-top: 30px
+ 
+}
+#main .media-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+   margin: 10px 10px; 
+}
+.iconHeart {
+  position:relative;
+
+}
+p {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+  font-size: 20px;
+  
+}
+.modalBground {
+  border-radius: 5px;
+  background-color: #db8876;
+  display: none;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  right: 20%;
+  z-index: 2;
+}
+.modalBground_layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(130, 131, 141, 0.4);
+
+  z-index: 1;
+  }
+
+ .modalBground header {
+  justify-content: space-between;
+  height: fit-content;
+ }
+
+
+
+ .modalBground header h2 {
+  font-size: 3em;
+  font-weight: normal;
+  width: 200px;
+  margin: 0;
+
+ }
+
+  .modalBground header img {
+  margin-left:80%;
+ }
+
+
+ form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  
+ }
+
+ form label {
+  margin-top: 10px;
+  color: #312e2e;
+  font-size: 3em;
+ }
+
+ form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+  }
+
+ form input {
+  width: 100%;
+  height: 100%;
+  min-height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  }
+
+ form textarea.inputMessage {
+  height: 180px;
+  padding-top: 10px;
+  width: 100%;
+  font-size: 1em;
+  border-radius: 5px;
+ }
+
+}
+@media (min-width: 769px) and (max-width: 900px) {
+
+  #contact-button {
+    margin-left: 70px;
+}
+
+  .logo{
+    margin-left: 10px;
+    margin-right: 200px;
+    height: 60px;
+    margin-top: 50px;
+  
+    }
+  .photograph-header {
+    height: 25rem;
+    padding: 1rem;
+    border-radius: 5px;
+    min-height: 10px;
+    margin-right: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-self: center;
+   
+    
+  }
+  .firstName {
+    font-size: 3em;
+ 
+   
+  }
+  #photograph-data {
+    margin: 1rem 0;
+    line-height: 4rem; 
+     font-size: 1.5em; 
+    height: 200px;
+}
+  img.portrait {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    background-color: hsl(0, 0%, 90%);
+    object-fit: cover;
+    margin-top: 10px;
+}
+#medias {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+  margin-top: 30px
+ 
+}
+#main .media-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+   margin: 10px 10px; 
+}
+.iconHeart {
+  position:relative;
+
+}
+p {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+  font-size: 20px;
+
+  
+}
+.modalBground {
+  border-radius: 5px;
+  background-color: #db8876;
+  display: none;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  right: 20%;
+  z-index: 2;
+}
+.modalBground_layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(130, 131, 141, 0.4);
+
+  z-index: 1;
+  }
+
+ .modalBground header {
+  justify-content: space-between;
+  height: fit-content;
+ }
+
+
+
+ .modalBground header h2 {
+  font-size: 4em;
+  font-weight: normal;
+  width: 400px;
+  margin: 0;
+
+ }
+
+ .modalBground header img {
+  margin-left: 120px;
+ }
+
+
+ form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  
+ }
+
+ form label {
+  margin-top: 10px;
+  color: #312e2e;
+  font-size: 3em;
+ }
+
+ form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+  }
+
+ form input {
+  width: 100%;
+  height: 100%;
+  min-height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  }
+
+ form textarea.inputMessage {
+  height: 180px;
+  padding-top: 10px;
+  width: 100%;
+  font-size: 1em;
+  border-radius: 5px;
+ }
+
+}
+
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  body {
+    padding: 10px;
+    
+  }
+img.portrait {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left:60px;
+  background-color: hsl(0, 0%, 90%);
+  object-fit: cover;
+  margin-top: 10px;
+
+}
+
+  header a {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    /*margin-left: 700px;*/
+    margin-right: 10px;
+  }
+
+  .logo {
+    height: 50px;
+    width: 200px;
+    margin-left: 40px;
+    margin-right: 700px;
+    margin-top: 100px;
+    /* Espace entre le logo et le titre */
+
+  }
+
+  .photographer_section {
+    grid-template-columns: 1fr;
+  }
+
+  .photograph-header {
+    margin: 0 20px;
+    height: 25rem;
+    padding: 1rem;
+    border-radius: 5px;
+    min-height: 10px;
+    margin-right:150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-self: center;
+    width: 800px;
+
+  }
+
+  .photograph-header #photograph-data,
+  .photograph-header #contact-button,
+  .photograph-header #photograph-picture {
+    width: 100%;
+  }
+
+  .contact_button {
+  
+    margin-top: 10px;
+  }
+  #medias {
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+    gap: 100px;
+    margin-top: 50px
+   
+  }
+  #main .media-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+
+#priceLikes{
+  width: 350px;
+}
+
+.modalBground {
+  border-radius: 5px;
+  background-color: #db8876;
+  display: none;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  right: 20%;
+  z-index: 2;
+}
+.modalBground_layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(130, 131, 141, 0.4);
+
+  z-index: 1;
+  }
+
+ .modalBground header {
+  justify-content: space-between;
+  height: fit-content;
+ }
+
+
+
+ .modalBground header h2 {
+  font-size: 3em;
+  font-weight: normal;
+  width: 250px;
+  margin: 0;
+
+ }
+
+ .modalBground header img {
+  margin-left: 80%;
+ }
+
+
+ form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  
+ }
+
+ form label {
+  margin-top: 10px;
+  color: #312e2e;
+  font-size: 2em;
+ }
+
+ form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+  }
+
+ form input {
+  width: 100%;
+  height: 100%;
+  min-height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  }
+
+ form textarea.inputMessage {
+  height: 80px;
+  padding-top: 10px;
+  width: 100%;
+  font-size: 1em;
+  border-radius: 5px;
+ }
+
+
+}
+@media (min-width: 1025px) and (max-width: 1439px) {
+ 
+  body {
+    padding: 10px;
+    width: 100%;
+    
+  }
+img.portrait {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left:40px;
+  background-color: hsl(0, 0%, 90%);
+  object-fit: cover;
+  margin-top: 10px;
+
+}
+
+  header a {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    /*margin-left: 700px;*/
+    margin-right: 10px;
+  }
+
+  .logo {
+    height: 50px;
+    width: 200px;
+    margin-left: 200px;
+    margin-right: 700px;
+    margin-top: 100px;
+    /* Espace entre le logo et le titre */
+
+  }
+
+  .photographer_section {
+    grid-template-columns: 1fr;
+  }
+
+  .photograph-header {
+    
+    height: 25rem;
+    margin-right: 120px;
+    padding: 1rem;
+    border-radius: 5px;
+    min-height: 10px;
+    width: 750px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-self: center;
+  
+
+
+  }
+
+  .photograph-header #photograph-data,
+  .photograph-header #contact-button,
+  .photograph-header #photograph-picture {
+    width: 100%;
+  }
+
+  .contact_button {
+  
+    margin-top: 10px;
+  }
+  #medias {
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  margin-right: 200px;
+   
+    margin-top: 50px
+   
+  }
+  #main .media-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+    margin: 10px 200px;
+
+}
+#priceLikes{
+  width: 430px;
+}
+
+
+.modalBground {
+  border-radius: 5px;
+  background-color: #db8876;
+  display: none;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  right: 20%;
+  z-index: 2;
+}
+.modalBground_layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(130, 131, 141, 0.4);
+
+  z-index: 1;
+  }
+
+ .modalBground header {
+  justify-content: space-between;
+  height: fit-content;
+ }
+
+
+
+ .modalBground header h2 {
+  font-size: 5em;
+  font-weight: normal;
+  width: 400px;
+  margin: 0;
+
+ }
+
+ .modalBground header img {
+  margin-left: 80%;
+ }
+
+
+ form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  
+ }
+
+ form label {
+  margin-top: 10px;
+  color: #312e2e;
+  font-size: 3em;
+ }
+
+ form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+  }
+
+ form input {
+  width: 100%;
+  height: 100%;
+  min-height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  }
+
+ form textarea.inputMessage {
+  height: 180px;
+  padding-top: 10px;
+  width: 100%;
+  font-size: 1em;
+  border-radius: 5px;
+ }
+
+}
+
+
+
+@media (min-width: 1440px) and (max-width: 1800px) {  
+
+  body {
+    padding: 10px;
+  }
+ img.portrait {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  background-color: hsl(0, 0%, 90%);
+  object-fit: cover;
+  margin-top: 10px;
+ }
+
+  header a {
+    padding: 10px;
+  }
+   
+  h1 {
+    font-size: 1.8em;
+    /*margin-left: 700px;*/
+    margin-right: 10px;
+  }
+
+  .logo {
+    margin-top: 50px;
+    height: 30px;
+    
+    margin-left: 130px;
+    margin-right: 700px;
+    /* Espace entre le logo et le titre */
+  }
+
+  .photographer_section   {
+    
+    /* margin-top: 20px; */
+    object-fit: cover;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+
+   
+ .photograph-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+    min-height: auto;
+    margin: 0 20px;
+    margin-top: 30px;
+    padding: 10px;
+
+  }
+ 
+  .photograph-header #photograph-data,
+  .photograph-header #contact-button,
+  .photograph-header #photograph-picture {
+    width: 100%;
+  }
+
+  .contact_button {
+   
+    min-width: 200px;
+    min-height: 80px;
+    margin-top: 70px;
+    
+  }
+  #medias {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 130px;
+    row-gap: 10px;
+    padding-bottom: 70px;
+  
+ }
+ #main .media-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:0px 130px;
+  }
+
+ #photograph-data {
+  margin: 1rem 0;
+  line-height: 4rem;
+  font-size: 2em;
+  margin-left: 100px;
+   }
+ #priceLikes{
+  width: 430px;
+ }
+
+ .modalBground {
+  border-radius: 5px;
+  background-color: #db8876;
+  display: none;
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  position: absolute;
+  top: 80px;
+  left: 25%;
+  right: 20%;
+  z-index: 2;
+  height: 80%;
+ 
+ }
+
+ .modalBground_layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(130, 131, 141, 0.4);
+
+  z-index: 1;
+  }
+
+ .modalBground header {
+  justify-content: space-between;
+  height: fit-content;
+ }
+
+
+
+ .modalBground header h2 {
+  font-size: 7em;
+  font-weight: normal;
+  width: 500px;
+  margin: 0;
+
+ }
+
+  .modalBground header img {
+  margin-left: 120px;
+ }
+
+
+ form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  
+ }
+
+ form label {
+  margin-top: 10px;
+  color: #312e2e;
+  font-size: 3em;
+ }
+
+ form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+  }
+
+ form input {
+  width: 100%;
+  height: 100%;
+  min-height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  }
+
+ form textarea.inputMessage {
+  height: 180px;
+  padding-top: 10px;
+  width: 100%;
+  font-size: 1em;
+  border-radius: 5px;
+ }
+
+
+ }
+
