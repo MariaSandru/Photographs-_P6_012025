@@ -1,8 +1,9 @@
 /* import functions  */
-import{validateFirst} from "./userInterface.js";
-import{validateLast} from  "./userInterface.js";
-import{validateEmail} from "./userInterface.js";
-import{validateMessage} from "./userInterface.js";
+import{validateFirst} from "../utils/userInterface.js ";
+import{validateLast} from  "../utils/userInterface.js";
+import{validateEmail} from "../utils/userInterface.js";
+import{validateMessage} from "../utils/userInterface.js";
+
 
 
 /*  constantes DOM  */
