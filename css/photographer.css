@@ -25,6 +25,7 @@ img {
 #main {
   position: relative;
   top: 9rem;
+  max-width: 1440px;
 }
 
 
@@ -1379,7 +1380,7 @@ img.portrait {
 
 
 
-@media (min-width: 1440px) and (max-width: 1800px) {  
+@media (min-width: 1440px) and (max-width: 1920px) {  
 
   body {
     padding: 10px;
