@@ -1206,7 +1206,7 @@ img.portrait {
   width: 200px;
   border-radius: 50%;
   overflow: hidden;
-  margin-left:40px;
+  margin-left:70px;
   background-color: hsl(0, 0%, 90%);
   object-fit: cover;
   margin-top: 10px;
@@ -1226,7 +1226,7 @@ img.portrait {
   .logo {
     height: 50px;
     width: 200px;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-right: 700px;
     margin-top: 100px;
     /* Espace entre le logo et le titre */
@@ -1240,11 +1240,11 @@ img.portrait {
   .photograph-header {
     
     height: 25rem;
-    margin-right: 120px;
+    margin-left: 200px;
     padding: 1rem;
     border-radius: 5px;
     min-height: 10px;
-    width: 750px;
+    width: 1300px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1253,6 +1253,8 @@ img.portrait {
 
 
   }
+
+  
 
   .photograph-header #photograph-data,
   .photograph-header #contact-button,
@@ -1267,10 +1269,11 @@ img.portrait {
   #medias {
   
     display: grid;
-    grid-template-columns: 1fr 1fr;
-  margin-right: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+  margin-right: 300px;
+  column-gap: 50px;
+    margin-top: 50px;
    
-    margin-top: 50px
    
   }
   #main .media-section {
@@ -1278,7 +1281,7 @@ img.portrait {
     flex-direction: row;
     flex-wrap: wrap;
   
-    margin: 10px 200px;
+    margin: 10px 80px;
 
 }
 #priceLikes{
@@ -1380,7 +1383,7 @@ img.portrait {
 
 
 
-@media (min-width: 1440px) and (max-width: 3000px) {  
+@media (min-width: 1440px) and (max-width: 1800px) {  
 
   body {
     padding: 10px;
@@ -1575,3 +1578,198 @@ img.portrait {
 
  }
 
+ @media (min-width: 1801px) and (max-width: 3000px) {
+
+  body {
+    padding: 10px;
+  }
+ img.portrait {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+ margin: auto;
+  background-color: hsl(0, 0%, 90%);
+  object-fit: cover;
+  margin-top: 10px;
+  margin-left: 200px;
+ }
+
+  header a {
+    padding: 10px;
+  }
+   
+  h1 {
+    font-size: 1.8em;
+    /*margin-left: 700px;*/
+    margin-right: 10px;
+  }
+
+  .logo {
+    margin-top: 50px;
+    height: 30px;
+    
+    margin-left: 200px;
+    margin-right: 700px;
+    /* Espace entre le logo et le titre */
+  }
+
+  .photographer_section   {
+    
+    /* margin-top: 20px; */
+    object-fit: cover;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+
+   
+  .photograph-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+      min-height: auto;
+      margin: 0 80px;
+      margin-top: 30px;
+      padding: 10px;
+  
+    }
+ 
+  .photograph-header #photograph-data,
+  .photograph-header #contact-button,
+  .photograph-header #photograph-picture {
+    width: 100%;
+  }
+
+  .contact_button {
+   
+    min-width: 200px;
+    min-height: 80px;
+    margin-top: 70px;
+    
+  }
+  #medias {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 200px;
+    row-gap: 10px;
+    padding-bottom: 70px;
+  
+ }
+ #main .media-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:50px 200px;
+  }
+
+ #photograph-data {
+  margin: 1rem 0;
+  line-height: 4rem;
+  font-size: 2em;
+  margin-left: 100px;
+   }
+ #priceLikes{
+  width: 430px;
+ }
+
+ .modalBground {
+  border-radius: 5px;
+  background-color: #db8876;
+  display: none;
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  position: absolute;
+  top: 80px;
+  left: 25%;
+  right: 20%;
+  z-index: 2;
+  height: 80%;
+ 
+ }
+
+ .modalBground_layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(130, 131, 141, 0.4);
+
+  z-index: 1;
+  }
+
+ .modalBground header {
+  justify-content: space-between;
+  height: fit-content;
+ }
+
+
+
+ .modalBground header h2 {
+  font-size: 7em;
+  font-weight: normal;
+  width: 500px;
+  margin: 0;
+
+ }
+
+  .modalBground header img {
+  margin-left: 120px;
+ }
+
+
+ form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  
+ }
+
+ form label {
+  margin-top: 10px;
+  color: #312e2e;
+  font-size: 3em;
+ }
+
+ form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+  
+  }
+
+ form input {
+  width: 100%;
+  height: 100%;
+  min-height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-size: 2.5em;
+  }
+
+ form textarea.inputMessage {
+  height: 180px;
+  padding-top: 10px;
+  width: 100%;
+  font-size: 2.5em;
+  border-radius: 5px;
+ }
+
+
+  }
