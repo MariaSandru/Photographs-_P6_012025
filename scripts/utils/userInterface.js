@@ -35,8 +35,8 @@ export function displayHeaderPhotograph(data, idPhotographer){
     const divPicture = document.getElementById("photograph-picture");
     divData.innerHTML = `
         <h1 class="firstName">${name}</h1>
-        <p class="location bold">${city}, ${country}</p>
-        <p>${tagline}</p>`;
+        <p >${city}, ${country}</p>
+        <p class="location bold">${tagline}</p>`;
     divPicture.innerHTML = `<img src="./assets/images/Photographers_ID_photos/${portrait}"
                              class="portrait" alt="${name}">`;
 }

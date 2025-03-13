@@ -1,6 +1,22 @@
 /*.photograph-header {
   
 }*/
+
+
+
+
+
+ #photograph-data,
+p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #901c1c;
+}
+#photograph-data p.location.bold
+{
+  color: #312e2e;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +36,17 @@ body {
 img {
   display: block;
   object-fit: cover;
+}
+
+#photograph-data,
+p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #901c1c;
+}
+#photograph-data p.location.bold
+{
+  color: #312e2e;
 }
 
 #main {
