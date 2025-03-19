@@ -45,7 +45,7 @@ function displayModal() {
     /* récupérer le nom dans le titre h1 de la page */
     let firstName = document.querySelector("h1.firstName").innerText;
     /* les champs de saisies du formulaire sont focus */
-    const focusElement = document.querySelectorAll("#contact_modal input, #contact_modal textarea, #contact_modal  img, #contact_modal button");
+    const focusElement = document.querySelectorAll("#contact_modal input, #contact_modal textarea, #contact_modal  img, #contact_modal button,#closeContactForm");
     const firstElement = focusElement[0]; 
     const lastElement = focusElement[(focusElement.length - 1)];
     document.getElementById("contact_modal").focus(); 
@@ -58,8 +58,12 @@ function displayModal() {
     body.classList.add("no-scroll");  
     /*  mettre le focus pour icône fermeture modal */
     closeContactForm.focus();     
+
+
+
+
     /* accessibilité gestion de la navigation au clavier avec tab  */
-    document.querySelector("#contact_modal").addEventListener("keydown", (e) =>{
+    document.querySelector("#contact_modal #openModal #closeContactForm").addEventListener("keydown", (e) =>{
         const current = e.target;
         /* touche echap ou touche entrée sur l'icône croix fermeture  */
         if (e.key === "Escape" || (e.key === "Enter" && current == firstElement)){
@@ -68,6 +72,7 @@ function displayModal() {
         }else if(current == lastElement){
            /* pas la touche touche MAJ et touche Tab , sens défilement focus*/
             if(!e.shiftKey && e.key === "Tab"){ 
+
                e.preventDefault();
                 document.getElementById(firstElement.id).focus();
             }
@@ -79,10 +84,11 @@ function displayModal() {
             }
         }
          /* ecoute évènement touche espace pour fermeture de la modale */
-        if((e.target == closeContactForm) && (e.key === ' ')){
+        if((e.target == closeContactForm) && (e.key === 'Escape ')){
             closeModal(e);
         } 
     });  
+    
 }
 
 /* fermeture de la modale  */

@@ -19,7 +19,9 @@ p {
   color: rgb(60, 58, 58);
   /**/
 }
-
+.focused-element {
+  outline: 3px solid blue; /* Bordure bleue pour indiquer l'élément actif */
+}
 body {
   font-family: "Roboto", sans-serif;
   max-width: 1440px;

@@ -44,6 +44,7 @@ export function displayHeaderPhotograph(data, idPhotographer){
 
 /* paramètres : tableau media , prénom ,trie selectionné, lien pour la lightbox */
 export function displayMedia(medias,  firstName, sortBy, lightbox){
+    
     /* bloc pour afficher les médias */
     const divMedias = document.getElementById("medias"); 
     let articlesList = ""; /*code HTML pour les articles medias*/

@@ -55,13 +55,12 @@ async function initPage() {
 
 
     /*écoute évènement clic menu filtre par la flèche  étendre/réduire */
-    document.querySelector("#arrowDown").addEventListener("click", displayMenuFilters);
-    document.querySelector("#arrowUp").addEventListener("click", displayMenuFilters);
+    document.querySelector("#arrowDown").addEventListener("click", displayMenuFilters,displayHeaderPhotograph(photographData, identity),
+    displayMedia(photographerMedias, firstName, null, lightbox),displayPrice(photographerMedias, price, identity));
+    
 
-
-    /*écoute évènement clic menu filtre par la flèche  étendre/réduire */
-    document.querySelector("#arrowDown").addEventListener("click", displayMenuFilters);
-    document.querySelector("#arrowUp").addEventListener("click", displayMenuFilters);
+    document.querySelector("#arrowUp").addEventListener("click", displayMenuFilters,displayHeaderPhotograph(photographData, identity),
+    displayMedia(photographerMedias, firstName, null, lightbox),displayPrice(photographerMedias, price, identity));
 
 
     /*écoute évènement touche entrée clavier(Keycode 13) pour étendre/réduire 
@@ -69,11 +68,20 @@ async function initPage() {
     document.querySelector("#arrowDown").addEventListener("keyup", (e) => {
         if (e.keyCode == "13") {
             displayMenuFilters();
+            displayHeaderPhotograph(photographData, identity);
+            displayMedia(photographerMedias, firstName, null, lightbox);
+            displayPrice(photographerMedias, price, identity);
+
         }
     });
     document.querySelector("#arrowUp").addEventListener("keyup", (e) => {
         if (e.keyCode == "13") {
             displayMenuFilters();
+  displayHeaderPhotograph(photographData, identity);
+            displayMedia(photographerMedias, firstName, null, lightbox);
+            displayPrice(photographerMedias, price, identity);
+
+            
         }
     });
     /* écoute évènement clic icône coeurs de chaque cartes  pour incrémenter le nombre

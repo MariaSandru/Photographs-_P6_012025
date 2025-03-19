@@ -10,7 +10,9 @@ export default class Lightbox{
         /* donnée média sélectionné par Id */
         this._selectMedia = this.getId(id);   
         this.displayMedia(); /* afficher le média */
-        document.getElementById("lightbox").focus(); 
+        document.getElementById("lightbox").focus();
+    
+
     }
      /* Récupérer données média sélectionné */
      getId(id){
@@ -24,6 +26,7 @@ export default class Lightbox{
         document.querySelector("#lightbox .previousMedia").addEventListener("click", () => {
             this.previous();
         });
+      
         /* média suivant cliqué pour l'afficher */
         document.querySelector("#lightbox .nextMedia").addEventListener("click", () => {
             this.next();
@@ -67,12 +70,27 @@ export default class Lightbox{
                     e.preventDefault();
                     this.next();
                     break;
+                    case "ArrowUp":
+                        e.preventDefault();
+                        console.log("Flèche haut pressée"); // Remplacez par une action spécifique
+                        break;
+                    case "ArrowDown":
+                        e.preventDefault();
+                        console.log("Flèche bas pressée"); // Remplacez par une action spécifique
+                        break;
+
                 case "Escape":
+                    console.log("Escape pressée : fermer la lightbox");
                     e.preventDefault();
                     this.close();
                     break;
+
+                case "Tab":
+            console.log("Tab pressée : naviguer entre les éléments interactifs");
+            break;
             }    
         });
+        
     }
     
     /* media suivant */
